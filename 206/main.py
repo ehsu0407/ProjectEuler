@@ -57,5 +57,6 @@ def is_perfect_square(num):
 
     return False
 
-answer = solve()
-print "The answer is: {0}".format(answer)
+if __name__ == "__main__":
+    answer = solve()
+    print "The answer is: {0}".format(answer)
