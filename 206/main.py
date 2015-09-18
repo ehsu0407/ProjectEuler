@@ -11,7 +11,7 @@ def solve():
         super_number = generate_super_number(num)
         print "Checking {0}, {1}".format(str(num).zfill(8), super_number)
         if is_perfect_square(super_number):
-            return super_number
+            return math.sqrt(super_number)
 
     return None
 
