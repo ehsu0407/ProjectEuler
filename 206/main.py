@@ -1,4 +1,4 @@
-import math
+from decimal import *
 
 __author__ = 'Eddie'
 
@@ -11,7 +11,7 @@ def solve():
         super_number = generate_super_number(num)
         print "Checking {0}, {1}".format(str(num).zfill(8), super_number)
         if is_perfect_square(super_number):
-            return math.sqrt(super_number)
+            return int(Decimal(super_number).sqrt())
 
     return None
 
@@ -52,7 +52,7 @@ def is_perfect_square(num):
         return False
 
     # Satisfies the square digital root test, now actually check if its a perfect square.
-    if math.sqrt(num) % 1 == 0:
+    if Decimal(num).sqrt() % 1 == 0:
         return True
 
     return False
